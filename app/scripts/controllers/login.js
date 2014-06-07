@@ -24,3 +24,5 @@ angular.module('steamCategoriesApp')
       }
     };
   });
+  
+  B69B3D3AAC2A179EA41E576C476BF8C4

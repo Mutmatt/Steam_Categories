@@ -3,7 +3,10 @@
 var express = require('express'),
     path = require('path'),
     fs = require('fs'),
-    mongoose = require('mongoose');
+    mongoose = require('mongoose'),
+	app_http = require('http');
+	
+//key=B69B3D3AAC2A179EA41E576C476BF8C4&steamid=76561197960434622
 
 /**
  * Main application file
