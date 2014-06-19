@@ -1,5 +1,7 @@
 'use strict';
 
+var _ = window._;
+
 var Game = function () {
 	this.id = -1;
 	this.name = '';

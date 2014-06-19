@@ -1,5 +1,7 @@
 'use strict';
 
+var _ = window._;
+
 var User = function () {
 	this.id = -1;
 	this.name = '';

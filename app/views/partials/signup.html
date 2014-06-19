@@ -35,6 +35,27 @@
           {{ errors.email }}
         </p>
       </div>
+	  
+	  <div class="form-group" ng-class="{ 'has-success': form.steamId.$valid && submitted,
+                                          'has-error': form.steamId.$invalid && submitted }">
+        <label>Steam Id</label>
+        
+        <input type="number" name="steamId" class="form-control" ng-model="user.steamId"
+               ng-minlength="17"
+			   ng-maxlength="17"
+			   placeholder="17 numbers (your 64 bit steam id)"
+			   min="00000000000000001"
+			   max="99999999999999999"
+               required
+               mongoose-error/>
+        <p class="help-block"
+           ng-show="(form.steamId.$error.minlength || form.steamId.$error.maxlength || form.steamId.$error.required) && submitted">
+          Steam ID must be 17 characters.
+        </p>
+        <p class="help-block" ng-show="form.steamId.$error.mongoose">
+          {{ errors.steamId }}
+        </p>
+      </div>
 
       <div class="form-group" ng-class="{ 'has-success': form.password.$valid && submitted,
                                           'has-error': form.password.$invalid && submitted }">
